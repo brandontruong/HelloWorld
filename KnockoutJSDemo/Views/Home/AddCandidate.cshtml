@@ -1,0 +1,64 @@
+﻿@{
+        ViewBag.Title = "Add Candidate"; 
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/knockout-1.2.1.js")" type="text/javascript"></script>
+<form data-bind="submit: addCandidate">
+    <fieldset>
+        <legend>Candidate info</legend>
+        <p>First Name: <input type="text" data-bind="value: FirstName" /> </p>
+        <p>Last Name: <input type="text" data-bind="value: LastName" /> </p>
+        <p>Email:<input type="text" data-bind="value: Email" /> </p>
+        <p>Experience: <input type="text" data-bind="value: Experience" />&nbsp;months </p>         
+    </fieldset>
+    <fieldset>
+        <legend>Technologies</legend>
+        New Technology:
+        <input type="text" data-bind='value: TechnologyToAdd, valueUpdate: "afterkeydown"' />
+        <button type="submit" data-bind="enable: TechnologyToAdd().length > 0, click: addTechnology">Add</button>        
+    </fieldset>
+     <fieldset>
+   <legend>Candidate Profile</legend>
+    <b><span data-bind="text: Name"></span></b>
+    has <b><span data-bind="text: Experience"></span></b> month experience <br />  
+    Email : <b><span data-bind="text: Email"></span></b>
+    <p>Technology Expertises</p>
+        <select multiple="multiple" width="50" data-bind="options: Technologies"></select>    
+     </fieldset>     
+    <input type="submit" value="Create" />  
+</form>
+<script type="text/javascript">
+$(function () {
+//activates KO
+ko.applyBindings(candidateModel);
+});
+var candidateModel = {
+    FirstName: ko.observable(''),
+    LastName: ko.observable(''),
+    Email: ko.observable(''),
+    Experience: ko.observable(0),
+    Technologies: ko.observableArray([]),
+    TechnologyToAdd: ko.observable('')
+};    
+candidateModel.Name = ko.dependentObservable(function () {
+    return candidateModel.FirstName() + 
+    " " + candidateModel.LastName();
+});
+candidateModel.addTechnology = function () {
+    if (candidateModel.TechnologyToAdd() !== '') {
+        candidateModel.Technologies.push(candidateModel.TechnologyToAdd());
+        candidateModel.TechnologyToAdd('');
+    }
+};
+candidateModel.addCandidate = function () {
+    $.ajax({
+        url: "/Home/Create/",
+        type: 'post',
+        data: ko.toJSON(this),
+        contentType: 'application/json',
+        success: function (result) {
+            alert(result);
+        }
+    });
+};
+ </script>

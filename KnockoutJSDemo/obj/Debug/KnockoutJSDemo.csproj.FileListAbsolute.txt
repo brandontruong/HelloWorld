@@ -1,0 +1,15 @@
+d:\KnockoutJSDemo\KnockoutJSDemo\bin\KnockoutJSDemo.dll
+d:\KnockoutJSDemo\KnockoutJSDemo\bin\KnockoutJSDemo.pdb
+d:\KnockoutJSDemo\KnockoutJSDemo\bin\EntityFramework.dll
+d:\KnockoutJSDemo\KnockoutJSDemo\bin\EntityFramework.xml
+d:\KnockoutJSDemo\KnockoutJSDemo\obj\Debug\ResolveAssemblyReference.cache
+d:\KnockoutJSDemo\KnockoutJSDemo\obj\Debug\KnockoutJSDemo.dll
+d:\KnockoutJSDemo\KnockoutJSDemo\obj\Debug\KnockoutJSDemo.pdb
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\bin\KnockoutJSDemo.dll
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\bin\KnockoutJSDemo.pdb
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\bin\EntityFramework.dll
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\bin\EntityFramework.xml
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\obj\Debug\KnockoutJSDemo.dll
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\obj\Debug\KnockoutJSDemo.pdb
+C:\Users\brandon\Downloads\KnockoutJSDemo\KnockoutJSDemo\KnockoutJSDemo\bin\Glimpse.Core.dll

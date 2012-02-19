@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Name";
+}
+
+<h2>Name</h2>
+First Name: <input type="text" data-bind="value: FirstName"/> <br /> <br />
+Last Name: <input type="text" data-bind="value: LastName"/>  <br /> <br />
+Name: <span data-bind="text: FullName"></span>
+
+<script src="@Url.Content("~/Scripts/knockout-1.2.1.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        //activates KO
+        ko.applyBindings(viewModel);       
+    });
+    var viewModel = {
+        FirstName: ko.observable(''),
+        LastName: ko.observable('')
+};
+viewModel.FullName = ko.dependentObservable(function () {
+       return  viewModel.FirstName() + " "+  viewModel.LastName();
+    });
+</script>
